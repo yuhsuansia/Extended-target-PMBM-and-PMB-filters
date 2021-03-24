@@ -299,7 +299,7 @@ if paras.recycle
 end
 
 %whether to perform MB approximation
-paras.mb_approx = true;
+paras.mb_approx = false;
 %M-best assignments in Murty
 paras.M = 20;
 %MB approximation methods
