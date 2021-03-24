@@ -13,9 +13,9 @@ function [gwd] = GaussianWassersteinDistance(m1,P1,m2,P2)
 
 if(~any(P2,'all') || ~any(P1,'all'))
     %If P1 or P2 is zero
-    gwd = norm(m1-m2,2) + trace(P1 + P2);
+    gwd = norm(m1-m2,2)^2 + trace(P1 + P2);
     
 else
     sqrtP1 = sqrtm(P1);
-    gwd = norm(m1-m2,2) + trace(P1 + P2 - 2*sqrtm(sqrtP1*P2*sqrtP1));
+    gwd = norm(m1-m2,2)^2 + trace(P1 + P2 - 2*sqrtm(sqrtP1*P2*sqrtP1));
 end
